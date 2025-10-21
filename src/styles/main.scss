@@ -1,0 +1,14 @@
+@import "./mixins";
+@import "./variables";
+@import "../components/Header.scss";
+@import "../components/Skills.scss";
+@import "../components/Projects.scss";
+@import "../components/PR.scss";
+@import "../components/Footer.scss";
+@import "../components/Modal.scss";
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #fff;
+}

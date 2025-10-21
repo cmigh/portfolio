@@ -1,0 +1,47 @@
+#skills {
+  padding: 2rem 0 7rem 0;
+  overflow: hidden;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .skills-desc {
+    display: block;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+  .skills-slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
+
+    .skills-track {
+      display: flex;
+      gap: 2rem;
+      animation: scrollSkills 20s linear infinite;
+
+      .skill {
+        flex-shrink: 0;
+        background: #0078ff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
