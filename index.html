@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiho Ikeda | WordPress Engineer</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #333;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 60px 20px;
+      }
+
+      /* パララックス背景 */
+      .parallax {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* トップ */
+      #top {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        text-align: center;
+      }
+      #top h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      #top p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* スキル */
+      #skills {
+        background: #f9f9f9;
+        flex-direction: column;
+      }
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        max-width: 800px;
+      }
+      .skill {
+        background: #667eea;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .skill:hover {
+        background: #764ba2;
+      }
+
+      /* 実績 */
+      #projects {
+        background: #fff;
+        flex-direction: column;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        width: 100%;
+        max-width: 1080px;
+      }
+      .card {
+        background: #f1f3f5;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 16px;
+      }
+      .card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .card-content p {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      /* 自己PR */
+      #pr {
+        background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+        color: #fff;
+        text-align: center;
+        flex-direction: column;
+        padding: 80px 20px;
+        border-radius: 12px;
+      }
+      #pr p {
+        max-width: 700px;
+        margin: 0 auto 20px;
+        font-size: 1rem;
+      }
+
+      /* フッター */
+      footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 0.9rem;
+      }
+
+      /* アニメーション用 */
+      [data-aos] {
+        opacity: 0;
+        transition-property: opacity, transform;
+      }
+
+      @media (max-width: 600px) {
+        #top h1 {
+          font-size: 2rem;
+        }
+        #top p {
+          font-size: 1rem;
+        }
+        .card img {
+          height: 140px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- トップ -->
+    <section id="top" class="parallax" data-aos="fade-up">
+      <div>
+        <h1>池田 知穂 / Chiho Ikeda</h1>
+        <p>
+          SEO・多言語対応・パフォーマンス改善を得意とするWordPressエンジニア。<br />安定して成果の出るサイトを構築することを目指しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- スキル -->
+    <section id="skills" data-aos="fade-up">
+      <div>
+        <h2>スキル</h2>
+        <div class="skills-container">
+          <span class="skill">WordPress</span>
+          <span class="skill">ACF</span>
+          <span class="skill">MW WP Form</span>
+          <span class="skill">WPML</span>
+          <span class="skill">SEO</span>
+          <span class="skill">Google Maps API</span>
+          <span class="skill">LCP改善</span>
+          <span class="skill">PHP</span>
+          <span class="skill">JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実績 -->
+    <section id="projects" data-aos="fade-up">
+      <div>
+        <h2>制作実績</h2>
+        <div class="projects-grid">
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=1" alt="Project 1" />
+            <div class="card-content">
+              <h3>岩手観光協会サイト</h3>
+              <p><strong>内容：</strong>フォームとダウンロード管理を最適化</p>
+              <p><strong>技術：</strong>MW WP Form, Simple Download Monitor</p>
+            </div>
+          </div>
+
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=2" alt="Project 2" />
+            <div class="card-content">
+              <h3>京都移住プロジェクト</h3>
+              <p>
+                <strong>内容：</strong>WPMLとGoogle
+                Mapsによる多言語観光マップ構築
+              </p>
+              <p><strong>技術：</strong>WPML, Google Maps API</p>
+            </div>
+          </div>
+
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=3" alt="Project 3" />
+            <div class="card-content">
+              <h3>企業サイトSEO最適化</h3>
+              <p><strong>内容：</strong>テーマ構造見直しとLCP改善</p>
+              <p><strong>技術：</strong>Core Web Vitals, SEO内部対策</p>
+            </div>
+          </div>
+
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=4" alt="Project 4" />
+            <div class="card-content">
+              <h3>自治体サイトCMS刷新</h3>
+              <p><strong>内容：</strong>独自テーマ構築と投稿タイプ整理</p>
+              <p><strong>技術：</strong>ACF, Custom Post Type</p>
+            </div>
+          </div>
+
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=5" alt="Project 5" />
+            <div class="card-content">
+              <h3>多言語対応ECサイト</h3>
+              <p><strong>内容：</strong>WPMLでの商品翻訳・在庫同期</p>
+              <p><strong>技術：</strong>WooCommerce, WPML</p>
+            </div>
+          </div>
+
+          <div class="card" data-aos="zoom-in">
+            <img src="https://picsum.photos/600/400?random=6" alt="Project 6" />
+            <div class="card-content">
+              <h3>求人ポータルサイト構築</h3>
+              <p>
+                <strong>内容：</strong>2投稿タイプ（jobhunting /
+                kyotomorrow）の統合
+              </p>
+              <p><strong>技術：</strong>Custom Query, ACF Repeater</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 自己PR -->
+    <section id="pr" data-aos="fade-up">
+      <div>
+        <h2>自己PR</h2>
+        <p>
+          要件通りに作るだけでなく、「登る山が間違っていないか」を常に意識して開発を行っています。仕様書の不備や設計段階の課題にも気付き、正しい解決アプローチを提案するのが得意です。
+        </p>
+        <p>
+          現場ではディレクター・デザイナーと連携し、チーム全体で成果を出すことを意識しています。今後はバックエンド領域をさらに強化し、WordPressを超えたサービス設計にも関わっていきたいと考えています。
+        </p>
+      </div>
+    </section>
+
+    <footer>© 2025 Chiho Ikeda. All rights reserved.</footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  </body>
+</html>
