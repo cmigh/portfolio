@@ -11,6 +11,7 @@ interface Project {
   image: string;
   link?: string;
   details: string;
+  feature?: string[];
   codeSnippet?: string;
 }
 
@@ -46,6 +47,20 @@ const Modal: React.FC<Props> = ({ project, onClose }) => {
           <img src={project.image} alt={project.title} />
           <h3>{project.title}</h3>
           <p>{project.details}</p>
+          {project.feature && project.feature.length > 0 && (
+            <div className="modal-feature">
+              <h4>サイトスクリーンショット</h4>
+              <div className="feature-images">
+                {project.feature.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`${project.title} スクリーンショット ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
 
           {project.codeSnippet && (
             <SyntaxHighlighter language="typescript" style={oneDark}>
