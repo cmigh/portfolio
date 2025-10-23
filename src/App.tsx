@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -14,13 +15,21 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <Skills />
-      <Projects />
-      <PR />
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>My Portfolio</title>
+        <meta name="robots" content="noindex" />
+        <meta name="googlebot" content="noindex" />
+      </Helmet>
+
+      <div className="App">
+        <Header />
+        <Skills />
+        <Projects />
+        <PR />
+        <Footer />
+      </div>
+    </>
   );
 };
 
