@@ -26,7 +26,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "柳川市観光公式サイト",
+    title: "観光公式サイト",
     description:
       "これまでの集大成、Wordpressの機能を拡張し観光スポット記事の検索機能をアップデート",
     image: yanagawa,
@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "鎌倉",
+    title: "観光公式サイト",
     description:
       "wordpressに投稿した内容から見出しや関連投稿生成し、マイマップも表示させて観光客への情報収集を助ける",
     image: kamakura,
@@ -46,7 +46,7 @@ const projects: Project[] = [
     details:
       "wordpressで構築、多言語対応、googlemapとカスタムフィールドで入力した内容を合わせてより観光前、観光当日に分かりやすい記事に",
     feature: [],
-    codeSnippet: `
+    codeSnippet: `※こちらは掲載用に再構築したコードです
     <div class="p-schedule-wrapper u-container u-max-contents">
 
   <div class="p-schedule-lead is-fade js-fade-anime">
@@ -223,8 +223,8 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Kyushu Tourism Infomation",
-    description: "九州観光機構サイト SEOのスコアアップに最も注力したサイト",
+    title: "観光機構サイト",
+    description: "SEOのスコアアップに最も注力したサイト",
     image: kyushu,
     link: "https://kyushu-traveltips.com/",
     details:
@@ -398,8 +398,8 @@ add_action('wp_head', 'output_structured_data_dynamic');
   },
   {
     id: 5,
-    title: "Ibaraki Golf Guide",
-    description: "茨城県の観光サイトからゴルフ場紹介に特化したページ",
+    title: "ゴルフサイト",
+    description: "観光サイトからゴルフ場紹介に特化したページ",
     image: ibarakiguide,
     link: "https://visit.ibarakiguide.jp/golf/",
     details:
@@ -409,7 +409,7 @@ add_action('wp_head', 'output_structured_data_dynamic');
   },
   {
     id: 6,
-    title: "studykyoto",
+    title: "教育支援団体Webサイト",
     description: "地域観光LPのWEBデザインからコーディングまで全て担当",
     image: studykyoto,
     link: "",
